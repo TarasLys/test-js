@@ -108,7 +108,7 @@ function listSymbol(e) {
     txtCounter.innerHTML = result;
   
   
-  if (e.target.value.length > 30) {
+  if (e.target.value.length >= 30) {
 
 txtItem.removeEventListener("keyup", listSymbol)
     
