@@ -122,7 +122,17 @@ function listSymbol(e) {
   
 }
 
-txtItem.addEventListener(".keydown", repeatSymb)
+
+txtItem.addEventListener("input", inputAdd)
+
+function inputAdd(e) {
+  if (e.target.value.length > txtItemLimit) {
+    e.target.value = e.target.value.slice(0, txtItemLimit);
+
+  }
+}
+
+txtItem.addEventListener("keydown", repeatSymb)
 function repeatSymb(e) {
   if (e.repeat) listSymbol() 
   
