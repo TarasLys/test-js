@@ -103,8 +103,8 @@ function offClick(e) {
 
 txtItem.addEventListener("keyup", listSymbol)
 function listSymbol(e) {
-
-  const result = txtItemLimit - e.target.value.length
+const step = e.target.value.length - 1
+  const result = txtItemLimit - step
     txtCounter.innerHTML = result;
   
   
