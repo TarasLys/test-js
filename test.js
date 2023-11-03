@@ -103,12 +103,16 @@ function offClick(e) {
 
 txtItem.addEventListener("keyup", listSymbol)
 function listSymbol(e) {
-  const result = txtItemLimit - e.target.value.length
-  //console.log(result)
-  if (result >= 30) {
-    return txtCounter.innerHTML = result;
-  }
 
+  const result = txtItemLimit - e.target.value.length
+    txtCounter.innerHTML = result;
+  
+  
+  if (e.target.value.length > 30) {
+
+txtItem.removeEventListener("keyup", listSymbol)
+    
+  } return
   
 }
 
