@@ -93,16 +93,28 @@ function offClick(e) {
   } 
 }
 
-txtCounter.innerHTML = txtItemLimit
+
+
+  txtCounter.innerHTML = txtItemLimit
+
+
+
+
 
 txtItem.addEventListener("keyup", listSymbol)
 function listSymbol(e) {
   const result = txtItemLimit - e.target.value.length
   //console.log(result)
-  txtCounter.innerHTML = result;
+  if (result >= 30) {
+    return txtCounter.innerHTML = result;
+  }
+
+  
 }
 
 txtItem.addEventListener(".keydown", repeatSymb)
 function repeatSymb(e) {
   if (e.repeat) listSymbol() 
+  
 }
+
